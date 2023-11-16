@@ -17,7 +17,7 @@ model User {
   firstName    String
   lastName     String?
   email        String        @unique
-  createdDate  DateTime
+  createdDate  DateTime      @default(now())
   applications Application[]
   paths        Path[]
   links        Link[]

@@ -1,4 +1,7 @@
 {
+    "ts-node": {
+        "require": ["tsconfig-paths/register"]
+    },
     "compilerOptions": {
         "module": "NodeNext",
         "moduleResolution": "NodeNext",
@@ -7,13 +10,17 @@
         "target": "ES2020",
         "sourceMap": true,
         "outDir": "dist",
+        "baseUrl": "./src",
         "paths": {
-            "@/*": [
-                "./src/*"
-            ]
+            "@/*": ["./*"],
+            "@routes/*": ["./routes/*"],
+            "@controller/*": ["./controller/*"],
+            "@middleware/*": ["./middleware/*"],
+            "@secret/*": ["./secret/*"],
+            "@prisma/*": ["./prisma/*"]
         }
     },
     "include": [
-        "src/**/*"
+        "/**/*" 
     ],
 }
