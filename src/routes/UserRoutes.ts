@@ -1,15 +1,20 @@
-import { createUser, deleteUser, getProfile, loginUser, updateProfile } from "@controller/UserController";
-import { Router } from "express";
+import {
+  createUser,
+  deleteUser,
+  getProfile,
+  loginUser,
+  updateProfile,
+} from '@controller/UserController';
+import { Router } from 'express';
 
 export const userRouter: Router = Router();
 
-userRouter.post("/api/user", createUser);
+userRouter.post('/api/users', createUser);
 
-userRouter.post("/api/user/login", loginUser);
+userRouter.post('/api/users/login', loginUser);
 
-userRouter.delete("/api/user/:id", deleteUser);
+userRouter.get('/api/users/:id', getProfile);
 
-userRouter.get("/api/user/:id", getProfile);
+userRouter.put('/api/users/:id', updateProfile);
 
-userRouter.put("/api/user/:id", updateProfile);
-
+userRouter.delete('/api/users/:id', deleteUser);
