@@ -7,14 +7,14 @@ import {
   updateLink,
 } from '@controller/LinkController';
 
-export const documentRouter: Router = Router();
+export const linkRouter: Router = Router();
 
-documentRouter.get('/api/links', getUserLinks);
+linkRouter.get('/api/links', getUserLinks);
 
-documentRouter.post('/api/links', createLink);
+linkRouter.post('/api/links', createLink);
 
-documentRouter.get('/api/links/:id', getLink);
+linkRouter.get('/api/links/:id', getLink);
 
-documentRouter.put('/api/links/:id', updateLink);
+linkRouter.put('/api/links/:id', updateLink);
 
-documentRouter.delete('/api/links/:id', deleteLink);
+linkRouter.delete('/api/links/:id', deleteLink);

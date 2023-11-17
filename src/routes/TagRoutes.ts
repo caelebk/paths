@@ -7,14 +7,14 @@ import {
   updateTag,
 } from '@controller/TagController';
 
-export const documentRouter: Router = Router();
+export const tagRouter: Router = Router();
 
-documentRouter.get('/api/tags', getUserTags);
+tagRouter.get('/api/tags', getUserTags);
 
-documentRouter.post('/api/tags', createTag);
+tagRouter.post('/api/tags', createTag);
 
-documentRouter.get('/api/tags/:id', getTag);
+tagRouter.get('/api/tags/:id', getTag);
 
-documentRouter.put('/api/tags/:id', updateTag);
+tagRouter.put('/api/tags/:id', updateTag);
 
-documentRouter.delete('/api/tags/:id', deleteTag);
+tagRouter.delete('/api/tags/:id', deleteTag);
