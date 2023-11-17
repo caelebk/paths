@@ -5,3 +5,5 @@ Paths is a web application designed to optimize your job hunting experience. Eac
 - npm run dev to start application in dev environment
 
 - npx eslint . to lint application
+
+- docker-compose up -d to start both database and backend
