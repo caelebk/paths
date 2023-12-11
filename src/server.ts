@@ -41,11 +41,13 @@ app.use(documentRouter);
 
 passport.use(new LocalStrategy(verifyUser));
 
-passport.serializeUser((user: User, done) => {
-  process.nextTick(function () {
-    done(null, { id: user.id, username: user.username });
-  });
-});
+passport.serializeUser(
+  (user: User, done: (err: unknown, id?: unknown) => void) => {
+    process.nextTick(function () {
+      done(null, { id: user.id, username: user.username });
+    });
+  },
+);
 
 passport.deserializeUser(async (id: number, done) => {
   process.nextTick(function () {

@@ -5,4 +5,4 @@
 
 */
 -- AlterTable
-ALTER TABLE "Application" ADD COLUMN     "source" TEXT NOT NULL;
+ALTER TABLE "Application" ADD COLUMN     "source" TEXT;

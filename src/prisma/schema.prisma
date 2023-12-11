@@ -37,7 +37,7 @@ model Application {
   description     String?
   status          String?
   notes           String?
-  source          String
+  source          String?
   sourceUrl       String?
   appliedDate     DateTime?
   rejectedDate    DateTime?
