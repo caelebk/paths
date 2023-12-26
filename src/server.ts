@@ -3,7 +3,7 @@ import cors from 'cors';
 import config from '@secret/config.json';
 import passportLocal from 'passport-local';
 import passport from 'passport';
-import logger from 'morgan';
+import morgan from 'morgan';
 import session from 'express-session';
 import { userRouter } from '@routes/UserRoutes';
 import { applicationRouter } from '@routes/ApplicationRoutes';
@@ -31,6 +31,7 @@ app.use(
 );
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(morgan('combined'));
 
 app.use(userRouter);
 app.use(applicationRouter);
